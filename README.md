@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./src/assets/images/logo.png" alt="IMC logo" width="700px" />
+  <img src="./src/assets/images/logo.png" alt="IMC logo" width="300px" />
 </p>
 
 <h1 align="center">Calculadora de Índice de Massa Corporal (IMC)</h1>

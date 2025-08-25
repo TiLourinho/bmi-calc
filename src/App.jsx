@@ -1,7 +1,9 @@
+import Header from "./components/ui/Header";
+
 function App() {
   return (
     <main>
-      <p>Initial setup</p>
+      <Header />
     </main>
   );
 }

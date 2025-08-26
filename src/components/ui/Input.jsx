@@ -16,10 +16,10 @@ function Input({ id, placeholder, value, onChange }) {
 }
 
 Input.propTypes = {
-  id: PropTypes.string.isRequired,
-  placeholder: PropTypes.string.isRequired,
-  value: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired,
-};
+  id: PropTypes.string,
+  placeholder: PropTypes.string,
+  value: PropTypes.string,
+  onChange: PropTypes.func,
+}.isRequired;
 
 export default Input;

@@ -1,16 +1,17 @@
 import PropTypes from "prop-types";
 
-function Button({ value, onClick }) {
+function Button({ type, value, onClick }) {
   return (
-    <button type="button" onClick={onClick}>
+    <button type={type} onClick={onClick}>
       {value}
     </button>
   );
 }
 
 Button.propTypes = {
-  value: PropTypes.string,
+  type: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
   onClick: PropTypes.func,
-}.isRequired;
+};
 
 export default Button;

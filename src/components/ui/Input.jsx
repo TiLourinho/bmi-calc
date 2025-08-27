@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 
-function Input({ id, placeholder, value, onChange }) {
+function Input({ label, id, placeholder, value, onChange }) {
   return (
     <div>
-      <label htmlFor={id}>Altura</label>
+      <label htmlFor={id}>{label}</label>
       <input
         type="number"
         id={id}
@@ -16,6 +16,7 @@ function Input({ id, placeholder, value, onChange }) {
 }
 
 Input.propTypes = {
+  label: PropTypes.string,
   id: PropTypes.string,
   placeholder: PropTypes.string,
   value: PropTypes.string,

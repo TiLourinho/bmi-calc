@@ -2,7 +2,8 @@ import { useState } from "react";
 
 import Input from "../ui/Input";
 import Button from "../ui/Button";
-import convertCentimetersToMeters from "../../utils/helpers";
+import Classification from "./Classification";
+import { convertCentimetersToMeters } from "../../utils/helpers";
 
 function Form() {
   const [height, setHeight] = useState("");
@@ -14,7 +15,9 @@ function Form() {
     else if (id === "weight") setWeight(value);
   }
 
-  function handleCalc() {
+  function handleSubmit(event) {
+    event.preventDefault();
+
     const heightNum = convertCentimetersToMeters(height);
     const weightNum = Number(weight);
     const result = weightNum / Math.pow(heightNum, 2);
@@ -25,20 +28,22 @@ function Form() {
   function handleReset() {
     setHeight("");
     setWeight("");
-    setBMI("");
+    setBMI(null);
   }
 
   return (
     <section>
-      <form className="form">
+      <form className="form" onSubmit={(event) => handleSubmit(event)}>
         <div className="form-section">
           <Input
+            label="Altura"
             id="height"
             placeholder="Metros ou centímetros"
             value={height}
             onChange={handleInput}
           />
           <Input
+            label="Peso"
             id="weight"
             placeholder="Quilos"
             value={weight}
@@ -46,10 +51,15 @@ function Form() {
           />
         </div>
         <div className="form-section">
-          <Button value={"Calcular"} onClick={() => handleCalc()} />
-          <Button value={"Limpar"} onClick={() => handleReset()} />
+          <Button type="submit" value="Calcular" />
+          <Button type="button" value="Limpar" onClick={() => handleReset()} />
         </div>
       </form>
+      {bmi && (
+        <article>
+          <Classification classification={bmi} />
+        </article>
+      )}
     </section>
   );
 }

@@ -2,7 +2,8 @@ function Header() {
   return (
     <header>
       <img src="/src/assets/images/logo.png" alt="IMC logo" />
-      <h1>Calculadora de Índice de Massa Corporal</h1>
+      <p>Calculadora de</p>
+      <h1>Índice de Massa Corporal</h1>
     </header>
   );
 }

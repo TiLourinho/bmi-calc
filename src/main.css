@@ -22,7 +22,8 @@ body {
 
 ul,
 ol {
-  list-style: none;
+  list-style: square;
+  list-style-position: inside;
 }
 
 a {
@@ -37,10 +38,19 @@ img {
 }
 
 button {
+  background-color: #0e3f98;
   border: none;
-  background: none;
+  border-radius: 15px;
+  color: #f8f9fa;
   cursor: pointer;
-  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 0.8rem 2.5rem;
+  transition: all 0.2s;
+}
+
+button:hover {
+  background-color: #225bc5;
 }
 
 input,
@@ -56,18 +66,19 @@ select {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  padding: 0 20px;
   max-width: 600px;
   min-height: 100vh;
   text-align: center;
   width: 100%;
+  transition: all 0.2s;
 }
 
 main {
   background: linear-gradient(0deg, #ff7500 0%, #ffaa00 100%);
   border-radius: 25px;
   box-shadow: 0px 0px 15px #0a2b68;
-  padding: 15px 20px 30px 20px;
+  padding: 15px 35px 30px 35px;
+  max-height: auto;
 }
 
 header {
@@ -75,9 +86,15 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  line-height: 1.7rem;
+  margin-bottom: 25px;
 
   img {
     width: 45%;
+  }
+
+  p {
+    font-size: 1.2rem;
   }
 }
 
@@ -108,25 +125,57 @@ header {
   input:focus {
     border: 2px solid #0e3f98;
   }
-
-  button {
-    background-color: #0e3f98;
-    border-radius: 15px;
-    color: #f8f9fa;
-    cursor: pointer;
-    font-size: 0.9rem;
-    font-weight: bold;
-    padding: 0.8rem 2.5rem;
-    transition: all 0.2s;
-  }
-
-  button:hover {
-    background-color: #225bc5;
-  }
 }
 
 .form-section {
   gap: 1.3rem;
+}
+
+.classification {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: start;
+  border: 2px solid #f8f9fa81;
+  border-radius: 25px;
+  box-shadow: 2px 2px 4px #14141450;
+  margin-bottom: 25px;
+  padding: 0 30px 0 30px;
+  font-size: 0.9rem;
+  gap: 1.5rem;
+
+  span {
+    font-size: 3.3rem;
+    font-weight: bold;
+  }
+
+  p:first-child {
+    font-style: italic;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+
+  p:last-child {
+    line-height: 1rem;
+    text-align: justify;
+    text-justify: newspaper;
+  }
+}
+
+.tips {
+  margin: 15px 20px 10px 20px;
+
+  li {
+    text-align: initial;
+    line-height: 1.3rem;
+  }
+}
+
+article {
+  background: linear-gradient(0deg, #ffaa00 70%, #ff7500 100%);
+  border-radius: 25px;
+  padding-bottom: 25px;
 }
 
 @media (max-width: 768px) {

@@ -2,66 +2,90 @@
   <img src="./src/assets/images/logo.png" alt="IMC logo" width="300px" />
 </p>
 
-<h1 align="center">Calculadora de Índice de Massa Corporal (IMC)</h1>
+<p align="center"> <a href="#funcionalidades">Funcionalidades</a> • <a href="#demonstração">Demonstração</a> • <a href="#estrutura-do-projeto">Estrutura do Projeto</a> • <a href="#como-executar">Como Executar</a> • <a href="#tecnologias">Tecnologias</a> • <a href="#autoria">Autoria</a> </p><br>
 
-## Sobre
+<h1 align="center">Calculadora de Índice de Massa Corporal (IMC)</h1>
 
 Esta é uma calculadora de Índice de Massa Corporal (IMC) desenvolvida em React como projeto de aprendizado dos conceitos fundamentais da biblioteca. A aplicação permite calcular o IMC e classificar o resultado conforme os padrões da Organização Mundial da Saúde.
 
-## Desenvolvimento
+## Funcionalidades
 
-### Fase 1: Configuração do ambiente
+- **Cálculo de IMC**: calcula o índice baseado no peso e altura;
+- **Suporte a múltiplas unidades**: permite entrada de altura em metros ou centímetros;
+- **Classificação automática**: mostra a categoria do IMC;
+- **Dicas de saúde**: de acordo com sua categoria, sugere dicas de exercícios e nutrição;
+- **Feedback visual**: cores diferentes para cada classificação de IMC.
 
-1. Criar novo projeto React utilizando Vite;
-2. Limpar arquivos desnecessários do template inicial.
+## Demonstração
 
-### Fase 2: Estrutura de pastas
+<p align="center">
+  <img src="./public/repo/app.png" alt="Página inicial" />
+  <em>App</em>
+</p>
+<p align="center">
+  <img src="./public/repo/classification.png" alt="Classificação do IMC" />
+  <em>Classificação</em>
+</p>
+<p align="center">
+  <img src="./public/repo/health-tips.png" alt="Dicas de saúde" />
+  <em>Dicas de saúde</em>
+</p>
 
-1. Planejar a estrutura de arquivos antes de começar a codar.
+## Estrutura do projeto
 
-### Fase 3: Componente App
+```Text
+src/
+|—— assets/
+|   |—— data/
+|   |   └── classification.jsx
+|   └── images/
+|       └── logo.png
+|—— components/
+|   |—— content/
+|   |   |—— Classification.jsx
+|   |   |—— Form.jsx
+|   |   |—— HealthTips.jsx
+|   |   └── Result.jsx
+|   └── ui/
+|       |—— Button.jsx
+|       |—— Header.jsx
+|       └── Input.jsx
+|—— utils/
+|   └── helpers.jsx
+|—— App.jsx
+|—— main.css
+|—— main.jsx
+```
 
-1. Criar o esqueleto do componente App;
-2. Definir os estados necessários (peso, altura, resultado);
-3. Planejar a passagem de props entre componentes.
+## Como executar
 
-### Fase 4: Componente de Formulário
+```Bash
+# Clone o repositório
+$ git clone https://github.com/TiLourinho/bmi-calc.git
 
-1. Planejar a passagem de props entre componentes;
-2. Adicionar labels para cada campo;
-3. Implementar validação básica (números positivos);
-4. Permitir que usuário escolha entre metros ou centímetros.
+# Acesse a pasta do projeto
+$ cd bmi-calc
 
-### Fase 5: Lógica de Cálculo
+# Instale as dependências
+$ npm install
 
-1. Implementar função para calcular IMC;
-2. Criar função para converter unidades se necessário;
-3. Adicionar tratamento para entradas inválidas.
+# Execute a aplicação
+$ npm run dev
 
-### Fase 6: Componente de Resultado
+# No navegador
+http://localhost:5173/
+```
 
-1. Criar componente para exibir o valor do IMC;
-2. Mostrar a classificação conforme tabela padrão;
-3. Adicionar cores diferentes para cada classificação.
+## Tecnologias
 
-### Fase 7: Componente de Classificação
+- [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML): estrutura da aplicação;
+- [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS): estilização da aplicação;
+- [React](https://react.dev/): biblioteca JavaScript para interface do usuário;
+- [Vite](https://vite.dev/): ferramenta de build e desenvolvimento frontend.
 
-1. Criar função que retorna a classificação baseada no IMC;
-2. Definir faixas (abaixo do peso, normal, sobrepeso, etc.);
-3. Adicionar mensagens explicativas para cada faixa.
+## Autoria
 
-### Fase 8: Estilização
+Tiago Lourinho
 
-1. Adicionar CSS para melhorar a aparência;
-2. Deixar a interface responsiva;
-3. Usar cores intuitivas para as classificações;
-4. Melhorar a experiência do usuário com feedback visual.
-
-### Fase 9: Melhorias adicionais
-
-1. Adicionar histórico de cálculos;
-2. Implementar gráfico de progresso;
-3. Adicionar modo escuro/claro;
-4. Incluir dicas de saúde baseadas no resultado.
-
----
+[![LinkedIn](https://custom-icon-badges.demolab.com/badge/LinkedIn-0A66C2?logo=linkedin-white&logoColor=fff)](https://www.linkedin.com/in/lourinho-tiago/)
+[![Gmail Badge](https://img.shields.io/badge/-Gmail-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:lourinho.tiago@gmail.com)](mailto:lourinho.tiago@gmail.com)
